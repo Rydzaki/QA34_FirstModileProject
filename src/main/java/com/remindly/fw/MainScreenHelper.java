@@ -28,11 +28,27 @@ public class MainScreenHelper extends BaseHelper{
         return driver.findElement(By.id("recycle_title")).getText();
     }
 
+    public String isNoReminderDatePresent() {
+        return driver.findElement(By.id("recycle_date_time")).getText();
+    }
+
     public void tapOnKebabMenu() {
         tap(By.className("android.widget.ImageView"));
     }
 
     public void tapOnLicensesBtn() {
         tap(By.id("title"));
+    }
+
+    public String isNoReminderRepeatPresent() {
+        return driver.findElement(By.id("recycle_repeat_info")).getText().toLowerCase();
+    }
+
+    public String isNoReminderRepetitionIntervalPresent() {
+        return driver.findElement(By.id("recycle_repeat_info")).getText();
+    }
+
+    public String isNoReminderRepetitionsPresent() {
+        return driver.findElement(By.id("recycle_repeat_info")).getText();
     }
 }
